@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beckham Chadwick, Voice Actor &amp; Creator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg-primary:    #080f09;
+      --bg-secondary:  #0e1a0f;
+      --bg-card:       #131f14;
+      --bg-card-hover: #182219;
+      --sage-bright:   #96c98d;
+      --sage-mid:      #6e9e66;
+      --sage-dark:     #3f6338;
+      --sage-light:    #c2dbbe;
+      --sage-muted:    #4a6b45;
+      --text-primary:  #e6efe4;
+      --text-secondary:#8fab89;
+      --text-muted:    #556e52;
+      --border:        rgba(110,158,102,0.15);
+      --border-strong: rgba(110,158,102,0.3);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--sage-dark); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(8,15,9,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--sage-bright);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage-bright); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 4rem 4rem;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(63,99,56,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 20% 80%, rgba(110,158,102,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-grid-lines {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(110,158,102,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(110,158,102,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-mid);
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block; width: 40px; height: 1px;
+      background: var(--sage-mid);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--text-primary);
+      margin-bottom: 0.2em;
+    }
+
+    h1 span {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--sage-mid);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-subtitle strong {
+      color: var(--sage-bright);
+      font-weight: 500;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: var(--sage-mid);
+      color: var(--bg-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--sage-bright); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      background: transparent;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--border-strong);
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--sage-mid);
+      color: var(--sage-bright);
+      transform: translateY(-1px);
+    }
+
+    .hero-stats {
+      margin-top: 4rem;
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-item { }
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--sage-bright);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.3rem;
+    }
+
+    /* ── SECTIONS SHARED ── */
+    section {
+      padding: 6rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sage-mid);
+      margin-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 0 0 30px; height: 1px;
+      background: var(--sage-mid);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .section-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, var(--sage-dark), transparent);
+      margin: 0;
+    }
+
+    /* ── ABOUT ── */
+    #about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+
+    .about-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      line-height: 1.85;
+      font-size: 0.975rem;
+    }
+
+    .about-text p strong { color: var(--sage-bright); font-weight: 500; }
+
+    .about-sidebar { }
+
+    .gear-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gear-block h3 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-mid);
+      margin-bottom: 1rem;
+    }
+
+    .gear-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .gear-item:last-child { border-bottom: none; }
+    .gear-item span:first-child { color: var(--text-muted); }
+    .gear-item span:last-child { color: var(--text-primary); font-weight: 500; }
+
+    .accent-block {
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(63,99,56,0.2) 100%);
+      border: 1px solid var(--border-strong);
+      border-left: 3px solid var(--sage-mid);
+      border-radius: 4px;
+      padding: 1.5rem 1.75rem;
+    }
+    .accent-block p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* ── ACCENTS ── */
+    .accents-grid {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .accent-tag {
+      padding: 0.3rem 0.85rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── CREDITS ── */
+    #credits { }
+
+    .credits-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;
+    }
+
+    .credits-tabs {
+      display: flex; gap: 0;
+    }
+
+    .tab-btn {
+      padding: 0.6rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:first-child { border-radius: 2px 0 0 2px; }
+    .tab-btn:last-child { border-radius: 0 2px 2px 0; border-left: none; }
+    .tab-btn.active {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      color: var(--sage-bright);
+    }
+
+    .credits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .credit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      cursor: default;
+    }
+    .credit-card:hover {
+      border-color: var(--border-strong);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .credit-type {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .credit-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .credit-role {
+      font-size: 0.875rem;
+      color: var(--sage-bright);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .credit-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .credit-studio {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 0.4rem;
+    }
+    .credit-studio strong { color: var(--sage-bright); font-weight: 600; }
+
+    .credit-watch-btn {
+      display: inline-flex; align-items: center;
+      padding: 0.2rem 0.75rem;
+      background: transparent;
+      border: 1px solid var(--sage-dark);
+      border-radius: 2px;
+      color: var(--sage-mid);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s;
+    }
+    .credit-watch-btn:hover { background: var(--sage-dark); color: var(--sage-bright); }
+
+    .credit-badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .badge-published { background: rgba(110,158,102,0.15); color: var(--sage-bright); }
+    .badge-main { background: rgba(150,201,141,0.1); color: var(--sage-light); }
+    .badge-supporting { background: rgba(74,107,69,0.2); color: var(--text-secondary); }
+    .badge-recurring { background: rgba(63,99,56,0.25); color: var(--sage-mid); }
+
+    /* ── MONO NO AWARE ── */
+    #mna {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 4rem;
+    }
+
+    .mna-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 6px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mna-visual {
+      background: linear-gradient(135deg, #0a160b 0%, #0f2010 40%, #0c1a0d 100%);
+      padding: 4rem 3rem;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    .mna-visual::before {
+      content: '';
+      position: absolute;
+      top: -40%; left: -20%;
+      width: 80%; height: 80%;
+      background: radial-gradient(ellipse, rgba(63,99,56,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .mna-visual::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; right: -20%;
+      width: 60%; height: 60%;
+      background: radial-gradient(ellipse, rgba(110,158,102,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .mna-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sage-mid);
+      margin-bottom: 1.5rem;
+      position: relative; z-index: 1;
+    }
+
+    .mna-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      position: relative; z-index: 1;
+    }
+    .mna-title em {
+      font-style: italic;
+      color: var(--sage-bright);
+    }
+
+    .mna-logline {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+      position: relative; z-index: 1;
+    }
+
+    .mna-info {
+      padding: 3rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+
+    .mna-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .mna-info p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .mna-details {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .mna-detail {
+      padding: 0.75rem;
+      background: var(--bg-secondary);
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+    .mna-detail-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+    .mna-detail-value {
+      font-size: 0.85rem;
+      color: var(--sage-bright);
+      font-weight: 500;
+    }
+
+    .casting-alert {
+      padding: 0.85rem 1rem;
+      background: rgba(150,201,141,0.07);
+      border: 1px solid rgba(150,201,141,0.2);
+      border-radius: 3px;
+      font-size: 0.8rem;
+      color: var(--sage-light);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .casting-alert::before {
+      content: '●';
+      color: var(--sage-bright);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 4rem;
+      text-align: center;
+    }
+
+    #contact h2 { margin-bottom: 0.75rem; }
+
+    #contact p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+      display: block;
+    }
+    .contact-card:hover {
+      border-color: var(--sage-mid);
+      transform: translateY(-2px);
+    }
+
+    .contact-card-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .contact-card-value {
+      font-size: 0.9rem;
+      color: var(--sage-bright);
+      font-weight: 500;
+    }
+
+    .footer-line {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* ── TAB PANELS ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.5rem; }
+      section, #mna, #contact { padding: 4rem 1.5rem; }
+      #hero { padding: 7rem 1.5rem 3rem; }
+      #about { grid-template-columns: 1fr; gap: 3rem; }
+      .mna-wrapper { grid-template-columns: 1fr; }
+      .hero-stats { gap: 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      h1 { font-size: 3rem; }
+      .mna-details { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">BC</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#mna">Mono No Aware</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero" style="max-width:100%; padding-top:8rem;">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content" style="display:flex; align-items:flex-start; justify-content:space-between; gap:3rem;">
+  <div class="hero-text" style="flex:1; min-width:0;">
+    <div class="hero-eyebrow">Voice Actor · Director · Creator</div>
+    <h1>Beckham<br/><span>Chadwick</span></h1>
+    <p class="hero-subtitle">
+      Animation, stop-motion &amp; video game VA specializing in
+      <strong>expressive, character-driven performances.</strong>
+    </p>
+    <p class="hero-desc">
+      Heroes, villains, eccentrics, and emotionally grounded roles.
+      10+ accents. Professional home studio. Fast turnaround. No ego about direction.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://youtu.be/Z8-3LoOST5s?si=8BETSHz4-ydQV1RZ" target="_blank" class="btn-primary">
+        ▶ &nbsp;Listen to Demo
+      </a>
+      <a href="#credits" class="btn-secondary">View Credits</a>
+      <a href="#contact" class="btn-secondary">Work With Me</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Booked Roles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Published Credits</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Accents &amp; Dialects</div>
+      </div>
+    </div>
+  </div>
+  <!-- HEADSHOT -->
+  <div class="hero-headshot" style="flex-shrink:0; width:280px; margin-top:0.5rem;">
+    <img
+      src="headshot.jpg"
+      alt="Beckham Chadwick"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      style="width:100%; border-radius:12px; border:2px solid var(--accent); object-fit:cover; aspect-ratio:3/4; display:block;"
+    />
+    <div style="display:none; width:100%; aspect-ratio:3/4; border-radius:12px; border:2px dashed var(--accent); align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; color:var(--text-muted); font-size:0.85rem; text-align:center; padding:1rem; box-sizing:border-box;">
+      <div style="font-size:2rem; opacity:0.4;">📷</div>
+      <div>Add headshot.jpg<br/>to this folder</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-text">
+    <div class="section-label">About</div>
+    <h2>Character-driven.<br/>Built to perform.</h2>
+    <p>
+      I'm Beckham, a 19-year-old voice actor, content creator, and director. I specialize in <strong>animation, stop-motion,
+      and video game</strong> voice work, with a natural midrange voice that goes deep and
+      handles accents with ease.
+    </p>
+    <p>
+      Since early 2026, I've been deep in the work, booked roles across indie animated series,
+      brickfilms, and a Steam game, with more always in the pipeline.
+      I take direction well, deliver fast, and bring no ego to the booth.
+    </p>
+    <p>
+      Beyond voice acting, I'm building my own animated series (<em>Mono No Aware</em>),
+      learning 2D and 3D animation, and working toward the long game: <strong>owning my
+      own studio and creating original shows.</strong>
+    </p>
+    <div class="accent-block" style="margin-top:2rem;">
+      <p>"Comfortable taking direction and delivering fast turnarounds. Not interested in audiobooks or comic dubbing, animation, games, and stop-motion are the focus."</p>
+    </div>
+  </div>
+
+  <div class="about-sidebar">
+    <div class="gear-block">
+      <h3>Studio Setup</h3>
+      <div class="gear-item">
+        <span>Microphone</span>
+        <span>Rode NT1 Signature</span>
+      </div>
+      <div class="gear-item">
+        <span>Interface</span>
+        <span>Behringer UMC22</span>
+      </div>
+      <div class="gear-item">
+        <span>Software</span>
+        <span>Audacity</span>
+      </div>
+      <div class="gear-item">
+        <span>Room</span>
+        <span>Acoustically treated</span>
+      </div>
+    </div>
+
+    <div class="gear-block">
+      <h3>Accents &amp; Dialects</h3>
+      <div class="accents-grid">
+        <span class="accent-tag">American (General)</span>
+        <span class="accent-tag">Southern / Texan</span>
+        <span class="accent-tag">New Jersey</span>
+        <span class="accent-tag">Boston</span>
+        <span class="accent-tag">British RP</span>
+        <span class="accent-tag">Cockney</span>
+        <span class="accent-tag">Scottish</span>
+        <span class="accent-tag">Irish</span>
+        <span class="accent-tag">Russian</span>
+        <span class="accent-tag">Italian</span>
+
+      </div>
+    </div>
+
+    <div class="gear-block">
+      <h3>Character Types</h3>
+      <div class="accents-grid">
+        <span class="accent-tag">Heroes &amp; Anti-Heroes</span>
+        <span class="accent-tag">Villains</span>
+        <span class="accent-tag">Eccentrics</span>
+        <span class="accent-tag">Monsters &amp; Creatures</span>
+        <span class="accent-tag">Teens &amp; Young Adults</span>
+        <span class="accent-tag">Comedic &amp; Wacky</span>
+        <span class="accent-tag">Emotional &amp; Dramatic</span>
+        <span class="accent-tag">War General / Soldier</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CREDITS -->
+<section id="credits" style="max-width:1200px; margin:0 auto;">
+  <div class="credits-header">
+    <div>
+      <div class="section-label">Credits</div>
+      <h2>Voice Acting Work</h2>
+    </div>
+    <div class="credits-tabs">
+      <button class="tab-btn active" onclick="switchTab('published', this)">Published</button>
+      <button class="tab-btn" onclick="switchTab('production', this)">In Production</button>
+    </div>
+  </div>
+
+  <div id="tab-published" class="tab-panel active">
+    <div class="credit-card">
+      <div class="credit-type">Short Film · Comedy</div>
+      <div class="credit-title">Once Upon a Time...</div>
+      <div class="credit-role">Condom Guy, Bodega Guy, Child, Additional Voices</div>
+      <div class="credit-desc">Voiced the majority of characters in this wild comedic short.</div>
+      <div class="credit-studio">By <strong>Yosin Studios</strong></div>
+      <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
+        <span class="credit-badge badge-published">✓ Published</span>
+        <a href="https://youtube.com/shorts/f5pT2gEh5jk?si=HpKKXDhBnEmK_r-r" target="_blank" class="credit-watch-btn">▶ Watch</a>
+      </div>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Brickfilm · Crime Drama</div>
+      <div class="credit-title">Errand Boy</div>
+      <div class="credit-role">Chuckie</div>
+      <div class="credit-desc">A hardened war veteran turned mobster. 1980s New York crime drama.</div>
+      <div class="credit-studio">By <strong>JG Bricks</strong></div>
+      <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
+        <span class="credit-badge badge-published">✓ Published</span>
+        <a href="https://www.youtube.com/watch?v=fsQvY0BvsJY" target="_blank" class="credit-watch-btn">▶ Watch</a>
+      </div>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Brickfilm · Action</div>
+      <div class="credit-title">LEGO Boba Fett: Gang Assault</div>
+      <div class="credit-role">Bounty Hunter / Additional Voices</div>
+      <div class="credit-desc">Debut published credit as a bounty hunter in this action stop-motion film.</div>
+      <div class="credit-studio">By <strong>BrickMaestro</strong></div>
+      <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
+        <span class="credit-badge badge-published">✓ Published</span>
+        <a href="https://www.youtube.com/watch?v=jYAtuDGgATA" target="_blank" class="credit-watch-btn">▶ Watch</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-production" class="tab-panel">
+    <div class="credit-card">
+      <div class="credit-type">Animated Series · Action</div>
+      <div class="credit-title">Superboy: New World Order</div>
+      <div class="credit-role">Superboy / Conner Kent</div>
+      <div class="credit-desc">Lead role. Superboy as a fugitive across Europe. Action-driven animated series.</div>
+      <span class="credit-badge badge-main">Main Role</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Brickfilm · Superhero</div>
+      <div class="credit-title">LEGO Spider-Man Stop-Motion</div>
+      <div class="credit-role">Spider-Man, Hobgoblin, Rhino</div>
+      <div class="credit-desc">~45-minute brickfilm following a 15-year-old Spider-Man. Three roles including the lead.</div>
+      <span class="credit-badge badge-main">Main + Recurring</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series</div>
+      <div class="credit-title">The Doodle Den</div>
+      <div class="credit-role">Michael</div>
+      <div class="credit-desc">21-year-old living a delinquent life. Major recurring role in an indie animated series.</div>
+      <span class="credit-badge badge-recurring">Major Recurring</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series · Crime</div>
+      <div class="credit-title">City of Luck</div>
+      <div class="credit-role">Brass</div>
+      <div class="credit-desc">One of three main villains who runs the world's mafia. Recurring antagonist role.</div>
+      <span class="credit-badge badge-recurring">Villain · Recurring</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series · Apocalyptic</div>
+      <div class="credit-title">Dawn of Death</div>
+      <div class="credit-role">Ki-Karsha / Errand Boy</div>
+      <div class="credit-desc">Long-term series. Leader of a humanoid tarantula species + additional supporting role.</div>
+      <span class="credit-badge badge-supporting">Supporting (x2)</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series · Crime Drama</div>
+      <div class="credit-title">Imagined Evil, Ep. 1</div>
+      <div class="credit-role">Kenneth Chase (Young Man)</div>
+      <div class="credit-desc">Southern-accented supporting role in a fictional true-crime-style animated series.</div>
+      <span class="credit-badge badge-supporting">Supporting</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series</div>
+      <div class="credit-title">A New Life</div>
+      <div class="credit-role">Flash Marty</div>
+      <div class="credit-desc">Pam's protective older brother. Teases her nonstop but has her back completely.</div>
+      <span class="credit-badge badge-recurring">Major Recurring</span>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- MONO NO AWARE -->
+<div id="mna">
+  <div style="margin-bottom:2rem;">
+    <div class="section-label">Original Work</div>
+    <h2>Creator &amp; Director</h2>
+  </div>
+  <div class="mna-wrapper">
+    <div class="mna-visual">
+      <div class="mna-tag">Original Animated Series · 2026</div>
+      <div class="mna-title"><em>Mono<br/>No Aware</em></div>
+      <p class="mna-logline">"Two alien best friends in lawn chairs, passing a joint, talking about nothing."</p>
+    </div>
+    <div class="mna-info">
+      <h3>Creator · Director · Voice of Bro</h3>
+      <p>
+        Bro and Dude are two grey aliens who sit in lawn chairs outside every night,
+        passing a joint and talking about whatever's on their minds, dabbing, bad beer choices,
+        broken speakers, the last roach. No plot. No stakes. Just two guys existing in the same
+        space, and somehow it's always funny.
+      </p>
+      <div class="mna-details">
+        <div class="mna-detail">
+          <div class="mna-detail-label">Format</div>
+          <div class="mna-detail-value">60–90 sec / episode</div>
+        </div>
+        <div class="mna-detail">
+          <div class="mna-detail-label">Platform</div>
+          <div class="mna-detail-value">YouTube Shorts / Reels</div>
+        </div>
+        <div class="mna-detail">
+          <div class="mna-detail-label">Aesthetic</div>
+          <div class="mna-detail-value">Y2K / Early-2000s</div>
+        </div>
+        <div class="mna-detail">
+          <div class="mna-detail-label">Status</div>
+          <div class="mna-detail-value">Pre-production</div>
+        </div>
+      </div>
+      <div class="casting-alert">
+        Actively casting, VA, animator &amp; editor needed. No pay / portfolio project.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center;">Contact</div>
+  <h2>Let's Work Together</h2>
+  <p>Animation, stop-motion, video games. Fast turnaround. No ego.</p>
+
+  <div class="contact-grid">
+    <a href="mailto:beckhamchadwickwork@gmail.com" class="contact-card">
+      <div class="contact-card-label">Email</div>
+      <div class="contact-card-value">beckhamchadwickwork@gmail.com</div>
+    </a>
+    <a href="https://x.com/BeckhamChadVa" target="_blank" class="contact-card">
+      <div class="contact-card-label">X / Twitter</div>
+      <div class="contact-card-value">@BeckhamChadVa</div>
+    </a>
+    <a href="https://www.youtube.com/@BeckhamChadwickVoiceActor" target="_blank" class="contact-card">
+      <div class="contact-card-label">YouTube</div>
+      <div class="contact-card-value">@BeckhamChadwickVoiceActor</div>
+    </a>
+    <a href="https://www.castingcall.club/beckhamchad-" target="_blank" class="contact-card">
+      <div class="contact-card-label">Casting Call Club</div>
+      <div class="contact-card-value">beckhamchad-</div>
+    </a>
+    <a href="https://www.voices.com/profile/beckhamchadwick" target="_blank" class="contact-card">
+      <div class="contact-card-label">Voices.com</div>
+      <div class="contact-card-value">beckhamchadwick</div>
+    </a>
+    <a href="https://www.tiktok.com/@beckhamdoesntstoptalking" target="_blank" class="contact-card">
+      <div class="contact-card-label">TikTok</div>
+      <div class="contact-card-value">@beckhamdoesntstoptalking</div>
+    </a>
+    <a href="https://www.castingcall.club/beckhamchad-" target="_blank" class="contact-card">
+      <div class="contact-card-label">Mono No Aware Casting</div>
+      <div class="contact-card-value">Join the crew →</div>
+    </a>
+    <a href="https://discord.gg/DcmPPdFs" target="_blank" class="contact-card">
+      <div class="contact-card-label">Discord</div>
+      <div class="contact-card-value">Mono No Aware Server</div>
+    </a>
+  </div>
+
+  <div class="footer-line">
+    © 2026 Beckham Chadwick
+  </div>
+</section>
+
+<script>
+  function switchTab(tabName, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tabName).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

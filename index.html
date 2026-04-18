@@ -24,9 +24,7 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg-primary);
       color: var(--text-primary);
@@ -36,12 +34,10 @@
       overflow-x: hidden;
     }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg-primary); }
     ::-webkit-scrollbar-thumb { background: var(--sage-dark); border-radius: 3px; }
 
-    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -51,38 +47,28 @@
       border-bottom: 1px solid var(--border);
       transition: all 0.3s ease;
     }
-
     .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
+      font-size: 1.4rem; font-weight: 700;
       color: var(--sage-bright);
       text-decoration: none;
       letter-spacing: 0.05em;
     }
-
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-
     .nav-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      color: var(--text-secondary); text-decoration: none;
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--sage-bright); }
 
-    /* ── HERO ── */
     #hero {
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
       padding: 8rem 4rem 4rem;
     }
-
     .hero-bg {
       position: absolute; inset: 0;
       background:
@@ -90,7 +76,6 @@
         radial-gradient(ellipse 40% 60% at 20% 80%, rgba(110,158,102,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
-
     .hero-grid-lines {
       position: absolute; inset: 0; pointer-events: none;
       background-image:
@@ -98,553 +83,204 @@
         linear-gradient(90deg, rgba(110,158,102,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
-
-    .hero-content {
-      position: relative; z-index: 1;
-      max-width: 900px;
-    }
-
+    .hero-content { position: relative; z-index: 1; max-width: 900px; }
     .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--sage-mid);
-      margin-bottom: 1.5rem;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sage-mid); margin-bottom: 1.5rem;
       display: flex; align-items: center; gap: 1rem;
     }
-    .hero-eyebrow::before {
-      content: '';
-      display: block; width: 40px; height: 1px;
-      background: var(--sage-mid);
-    }
-
+    .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--sage-mid); }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3.5rem, 8vw, 7rem);
-      font-weight: 900;
-      line-height: 1.0;
-      color: var(--text-primary);
-      margin-bottom: 0.2em;
+      font-weight: 900; line-height: 1.0;
+      color: var(--text-primary); margin-bottom: 0.2em;
     }
-
-    h1 span {
-      color: transparent;
-      -webkit-text-stroke: 1px var(--sage-mid);
-    }
-
+    h1 span { color: transparent; -webkit-text-stroke: 1px var(--sage-mid); }
     .hero-subtitle {
       font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-      font-weight: 300;
-      letter-spacing: 0.05em;
+      color: var(--text-secondary); margin-bottom: 1.5rem;
+      font-weight: 300; letter-spacing: 0.05em;
     }
-
-    .hero-subtitle strong {
-      color: var(--sage-bright);
-      font-weight: 500;
-    }
-
+    .hero-subtitle strong { color: var(--sage-bright); font-weight: 500; }
     .hero-desc {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
+      font-size: 1rem; color: var(--text-muted);
+      max-width: 560px; margin-bottom: 2.5rem; line-height: 1.8;
     }
-
     .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.85rem 2rem;
-      background: var(--sage-mid);
-      color: var(--bg-primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: background 0.2s, transform 0.2s;
+      padding: 0.85rem 2rem; background: var(--sage-mid);
+      color: var(--bg-primary); text-decoration: none;
+      font-weight: 600; font-size: 0.85rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border-radius: 2px; transition: background 0.2s, transform 0.2s;
     }
     .btn-primary:hover { background: var(--sage-bright); transform: translateY(-1px); }
-
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.85rem 2rem;
-      background: transparent;
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid var(--border-strong);
-      border-radius: 2px;
+      padding: 0.85rem 2rem; background: transparent;
+      color: var(--text-secondary); text-decoration: none;
+      font-weight: 500; font-size: 0.85rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1px solid var(--border-strong); border-radius: 2px;
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
     }
-    .btn-secondary:hover {
-      border-color: var(--sage-mid);
-      color: var(--sage-bright);
-      transform: translateY(-1px);
-    }
-
+    .btn-secondary:hover { border-color: var(--sage-mid); color: var(--sage-bright); transform: translateY(-1px); }
     .hero-stats {
-      margin-top: 4rem;
-      display: flex; gap: 3rem; flex-wrap: wrap;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
+      margin-top: 4rem; display: flex; gap: 3rem; flex-wrap: wrap;
+      padding-top: 2rem; border-top: 1px solid var(--border);
     }
+    .stat-number { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--sage-bright); line-height: 1; }
+    .stat-label { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
 
-    .stat-item { }
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--sage-bright);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 0.3rem;
-    }
-
-    /* ── SECTIONS SHARED ── */
-    section {
-      padding: 6rem 4rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
+    section { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
     .section-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--sage-mid);
-      margin-bottom: 0.75rem;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--sage-mid); margin-bottom: 0.75rem;
       display: flex; align-items: center; gap: 0.75rem;
     }
-    .section-label::after {
-      content: '';
-      flex: 0 0 30px; height: 1px;
-      background: var(--sage-mid);
-    }
-
+    .section-label::after { content: ''; flex: 0 0 30px; height: 1px; background: var(--sage-mid); }
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 1rem;
-      line-height: 1.15;
+      font-weight: 700; color: var(--text-primary);
+      margin-bottom: 1rem; line-height: 1.15;
     }
+    .section-divider { width: 100%; height: 1px; background: linear-gradient(90deg, var(--sage-dark), transparent); margin: 0; }
 
-    .section-divider {
-      width: 100%; height: 1px;
-      background: linear-gradient(90deg, var(--sage-dark), transparent);
-      margin: 0;
-    }
-
-    /* ── ABOUT ── */
     #about { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-
-    .about-text p {
-      color: var(--text-secondary);
-      margin-bottom: 1.25rem;
-      line-height: 1.85;
-      font-size: 0.975rem;
-    }
-
+    .about-text p { color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.85; font-size: 0.975rem; }
     .about-text p strong { color: var(--sage-bright); font-weight: 500; }
-
-    .about-sidebar { }
-
-    .gear-block {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .gear-block h3 {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--sage-mid);
-      margin-bottom: 1rem;
-    }
-
-    .gear-item {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.875rem;
-    }
+    .gear-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .gear-block h3 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-mid); margin-bottom: 1rem; }
+    .gear-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; }
     .gear-item:last-child { border-bottom: none; }
     .gear-item span:first-child { color: var(--text-muted); }
     .gear-item span:last-child { color: var(--text-primary); font-weight: 500; }
+    .accent-block { background: linear-gradient(135deg, var(--bg-card) 0%, rgba(63,99,56,0.2) 100%); border: 1px solid var(--border-strong); border-left: 3px solid var(--sage-mid); border-radius: 4px; padding: 1.5rem 1.75rem; }
+    .accent-block p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; font-style: italic; }
+    .accents-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .accent-tag { padding: 0.3rem 0.85rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 2px; font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.05em; }
 
-    .accent-block {
-      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(63,99,56,0.2) 100%);
-      border: 1px solid var(--border-strong);
-      border-left: 3px solid var(--sage-mid);
-      border-radius: 4px;
-      padding: 1.5rem 1.75rem;
-    }
-    .accent-block p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      font-style: italic;
-    }
-
-    /* ── ACCENTS ── */
-    .accents-grid {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .accent-tag {
-      padding: 0.3rem 0.85rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      letter-spacing: 0.05em;
-    }
-
-    /* ── CREDITS ── */
-    #credits { }
-
-    .credits-header {
-      display: flex; justify-content: space-between; align-items: flex-end;
-      margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;
-    }
-
-    .credits-tabs {
-      display: flex; gap: 0;
-    }
-
-    .tab-btn {
-      padding: 0.6rem 1.5rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
+    .credits-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+    .credits-tabs { display: flex; gap: 0; }
+    .tab-btn { padding: 0.6rem 1.5rem; background: transparent; border: 1px solid var(--border); color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
     .tab-btn:first-child { border-radius: 2px 0 0 2px; }
     .tab-btn:last-child { border-radius: 0 2px 2px 0; border-left: none; }
-    .tab-btn.active {
-      background: var(--sage-dark);
-      border-color: var(--sage-dark);
-      color: var(--sage-bright);
-    }
-
-    .credits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    .credit-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem;
-      transition: border-color 0.2s, background 0.2s, transform 0.2s;
-      cursor: default;
-    }
-    .credit-card:hover {
-      border-color: var(--border-strong);
-      background: var(--bg-card-hover);
-      transform: translateY(-2px);
-    }
-
-    .credit-type {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--sage-muted);
-      margin-bottom: 0.6rem;
-    }
-
-    .credit-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.3rem;
-    }
-
-    .credit-role {
-      font-size: 0.875rem;
-      color: var(--sage-bright);
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-
-    .credit-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .credit-studio {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin-top: 0.4rem;
-    }
+    .tab-btn.active { background: var(--sage-dark); border-color: var(--sage-dark); color: var(--sage-bright); }
+    .credits-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    .credit-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; transition: border-color 0.2s, background 0.2s, transform 0.2s; cursor: default; }
+    .credit-card:hover { border-color: var(--border-strong); background: var(--bg-card-hover); transform: translateY(-2px); }
+    .credit-type { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-muted); margin-bottom: 0.6rem; }
+    .credit-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; }
+    .credit-role { font-size: 0.875rem; color: var(--sage-bright); font-weight: 500; margin-bottom: 0.5rem; }
+    .credit-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    .credit-studio { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.4rem; }
     .credit-studio strong { color: var(--sage-bright); font-weight: 600; }
-
-    .credit-watch-btn {
-      display: inline-flex; align-items: center;
-      padding: 0.2rem 0.75rem;
-      background: transparent;
-      border: 1px solid var(--sage-dark);
-      border-radius: 2px;
-      color: var(--sage-mid);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: background 0.2s, color 0.2s;
-    }
+    .credit-watch-btn { display: inline-flex; align-items: center; padding: 0.2rem 0.75rem; background: transparent; border: 1px solid var(--sage-dark); border-radius: 2px; color: var(--sage-mid); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-decoration: none; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
     .credit-watch-btn:hover { background: var(--sage-dark); color: var(--sage-bright); }
-
-    .credit-badge {
-      display: inline-block;
-      margin-top: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+    .credit-badge { display: inline-block; margin-top: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 2px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .badge-published { background: rgba(110,158,102,0.15); color: var(--sage-bright); }
     .badge-main { background: rgba(150,201,141,0.1); color: var(--sage-light); }
     .badge-supporting { background: rgba(74,107,69,0.2); color: var(--text-secondary); }
     .badge-recurring { background: rgba(63,99,56,0.25); color: var(--sage-mid); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 
-    /* ── MONO NO AWARE ── */
-    #mna {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 6rem 4rem;
-    }
+    /* ---- MNA EXPANDED ---- */
+    #mna { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; }
 
     .mna-wrapper {
-      background: var(--bg-card);
-      border: 1px solid var(--border-strong);
-      border-radius: 6px;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      background: var(--bg-card); border: 1px solid var(--border-strong);
+      border-radius: 6px; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr;
     }
-
     .mna-visual {
       background: linear-gradient(135deg, #0a160b 0%, #0f2010 40%, #0c1a0d 100%);
       padding: 4rem 3rem;
       display: flex; flex-direction: column; justify-content: center;
-      position: relative;
-      overflow: hidden;
-      min-height: 400px;
+      position: relative; overflow: hidden; min-height: 400px;
     }
+    .mna-visual::before { content: ''; position: absolute; top: -40%; left: -20%; width: 80%; height: 80%; background: radial-gradient(ellipse, rgba(63,99,56,0.25) 0%, transparent 70%); pointer-events: none; }
+    .mna-visual::after { content: ''; position: absolute; bottom: -20%; right: -20%; width: 60%; height: 60%; background: radial-gradient(ellipse, rgba(110,158,102,0.1) 0%, transparent 70%); pointer-events: none; }
+    .mna-tag { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sage-mid); margin-bottom: 1.5rem; position: relative; z-index: 1; }
+    .mna-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--text-primary); line-height: 1.1; margin-bottom: 1.25rem; position: relative; z-index: 1; }
+    .mna-title em { font-style: italic; color: var(--sage-bright); }
+    .mna-logline { font-size: 1rem; color: var(--text-secondary); line-height: 1.7; font-style: italic; position: relative; z-index: 1; }
+    .mna-info { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+    .mna-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--text-primary); margin-bottom: 1rem; }
+    .mna-info p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+    .mna-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 2rem; }
+    .mna-detail { padding: 0.75rem; background: var(--bg-secondary); border-radius: 3px; border: 1px solid var(--border); }
+    .mna-detail-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .mna-detail-value { font-size: 0.85rem; color: var(--sage-bright); font-weight: 500; }
 
-    .mna-visual::before {
-      content: '';
-      position: absolute;
-      top: -40%; left: -20%;
-      width: 80%; height: 80%;
-      background: radial-gradient(ellipse, rgba(63,99,56,0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .mna-visual::after {
-      content: '';
-      position: absolute;
-      bottom: -20%; right: -20%;
-      width: 60%; height: 60%;
-      background: radial-gradient(ellipse, rgba(110,158,102,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .mna-tag {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--sage-mid);
-      margin-bottom: 1.5rem;
-      position: relative; z-index: 1;
-    }
-
-    .mna-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--text-primary);
-      line-height: 1.1;
-      margin-bottom: 1.25rem;
-      position: relative; z-index: 1;
-    }
-    .mna-title em {
-      font-style: italic;
-      color: var(--sage-bright);
-    }
-
-    .mna-logline {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      font-style: italic;
-      position: relative; z-index: 1;
-    }
-
-    .mna-info {
-      padding: 3rem;
-      display: flex; flex-direction: column; justify-content: center;
-    }
-
-    .mna-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--text-primary);
-      margin-bottom: 1rem;
-    }
-
-    .mna-info p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .mna-details {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .mna-detail {
-      padding: 0.75rem;
-      background: var(--bg-secondary);
-      border-radius: 3px;
-      border: 1px solid var(--border);
-    }
-    .mna-detail-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
-    }
-    .mna-detail-value {
-      font-size: 0.85rem;
-      color: var(--sage-bright);
-      font-weight: 500;
-    }
-
-    .casting-alert {
-      padding: 0.85rem 1rem;
-      background: rgba(150,201,141,0.07);
-      border: 1px solid rgba(150,201,141,0.2);
-      border-radius: 3px;
-      font-size: 0.8rem;
-      color: var(--sage-light);
+    .mna-status-badge {
+      padding: 0.85rem 1rem; background: rgba(63,99,56,0.15);
+      border: 1px solid rgba(110,158,102,0.25); border-radius: 3px;
+      font-size: 0.8rem; color: var(--sage-light);
       display: flex; align-items: center; gap: 0.5rem;
     }
-    .casting-alert::before {
-      content: '●';
-      color: var(--sage-bright);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
-    }
+    .mna-status-badge::before { content: '●'; color: var(--sage-bright); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-    /* ── CONTACT ── */
-    #contact {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 6rem 4rem;
-      text-align: center;
+    .mna-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 2.5rem; margin-top: 1.5rem;
     }
+    .mna-block h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text-primary); margin-bottom: 1rem; }
+    .mna-block p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 1rem; }
+    .mna-block p:last-child { margin-bottom: 0; }
 
+    .mna-callout {
+      border-left: 3px solid var(--sage-mid);
+      padding: 1rem 1.5rem;
+      background: rgba(63,99,56,0.1);
+      border-radius: 0 4px 4px 0;
+      margin: 1.5rem 0 0;
+    }
+    .mna-callout p { font-style: italic; color: var(--sage-light) !important; font-size: 0.95rem !important; margin: 0 !important; }
+
+    .mna-char-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .mna-char-card { border-radius: 4px; overflow: hidden; border: 1px solid var(--border); }
+    .mna-char-header { padding: 1.1rem 1.25rem; }
+    .mna-char-header .char-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: #fff; }
+    .mna-char-header .char-tag { font-size: 0.7rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; margin-top: 0.2rem; font-style: italic; }
+    .mna-char-body { padding: 1.25rem; background: var(--bg-card); }
+    .mna-char-trait { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .mna-char-trait strong { color: var(--text-secondary); font-weight: 500; }
+
+    .mna-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .mna-two-col .col h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--sage-bright); margin-bottom: 0.75rem; }
+    .mna-two-col .col p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8; }
+    .mna-two-col .col ul { list-style: none; padding: 0; }
+    .mna-two-col .col ul li { font-size: 0.85rem; color: var(--text-secondary); padding: 0.3rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .mna-two-col .col ul li::before { content: '/'; color: var(--sage-muted); flex-shrink: 0; }
+    .mna-two-col .col ul li:last-child { border-bottom: none; }
+
+    .mna-team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .mna-team-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 3px; padding: 1rem 1.25rem; }
+    .mna-team-name { font-size: 0.9rem; font-weight: 600; color: var(--sage-bright); margin-bottom: 0.25rem; }
+    .mna-team-role { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.04em; line-height: 1.4; }
+
+    .mna-longame-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .mna-longame-item { padding: 1.25rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 3px; text-align: center; }
+    .mna-longame-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--sage-bright); line-height: 1; margin-bottom: 0.4rem; }
+    .mna-longame-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    #contact { max-width: 1200px; margin: 0 auto; padding: 6rem 4rem; text-align: center; }
     #contact h2 { margin-bottom: 0.75rem; }
+    #contact p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 3rem; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto 3rem; }
+    .contact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; text-decoration: none; transition: border-color 0.2s, transform 0.2s; display: block; }
+    .contact-card:hover { border-color: var(--sage-mid); transform: translateY(-2px); }
+    .contact-card-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .contact-card-value { font-size: 0.9rem; color: var(--sage-bright); font-weight: 500; }
+    .footer-line { border-top: 1px solid var(--border); padding-top: 2rem; color: var(--text-muted); font-size: 0.8rem; }
 
-    #contact p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 3rem;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-    }
-
-    .contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem;
-      text-decoration: none;
-      transition: border-color 0.2s, transform 0.2s;
-      display: block;
-    }
-    .contact-card:hover {
-      border-color: var(--sage-mid);
-      transform: translateY(-2px);
-    }
-
-    .contact-card-label {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-    .contact-card-value {
-      font-size: 0.9rem;
-      color: var(--sage-bright);
-      font-weight: 500;
-    }
-
-    .footer-line {
-      border-top: 1px solid var(--border);
-      padding-top: 2rem;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    /* ── TAB PANELS ── */
-    .tab-panel { display: none; }
-    .tab-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
@@ -652,9 +288,11 @@
       #hero { padding: 7rem 1.5rem 3rem; }
       #about { grid-template-columns: 1fr; gap: 3rem; }
       .mna-wrapper { grid-template-columns: 1fr; }
+      .mna-char-grid { grid-template-columns: 1fr; }
+      .mna-two-col { grid-template-columns: 1fr; }
+      .mna-longame-grid { grid-template-columns: 1fr; }
       .hero-stats { gap: 2rem; }
     }
-
     @media (max-width: 600px) {
       .nav-links { display: none; }
       h1 { font-size: 3rem; }
@@ -664,7 +302,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">BC</a>
   <ul class="nav-links">
@@ -675,108 +312,77 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero" style="max-width:100%; padding-top:8rem;">
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-content" style="display:flex; align-items:flex-start; justify-content:space-between; gap:3rem;">
-  <div class="hero-text" style="flex:1; min-width:0;">
-    <div class="hero-eyebrow">Voice Actor · Director · Creator</div>
-    <h1>Beckham<br/><span>Chadwick</span></h1>
-    <p class="hero-subtitle">
-      Animation, stop-motion &amp; video game VA specializing in
-      <strong>expressive, character-driven performances.</strong>
-    </p>
-    <p class="hero-desc">
-      Heroes, villains, eccentrics, and emotionally grounded roles.
-      10+ accents. Professional home studio. Fast turnaround. No ego about direction.
-    </p>
-    <div class="hero-ctas">
-      <a href="https://youtu.be/Z8-3LoOST5s?si=8BETSHz4-ydQV1RZ" target="_blank" class="btn-primary">
-        ▶ &nbsp;Listen to Demo
-      </a>
-      <a href="#credits" class="btn-secondary">View Credits</a>
-      <a href="#contact" class="btn-secondary">Work With Me</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Booked Roles</div>
+    <div class="hero-text" style="flex:1; min-width:0;">
+      <div class="hero-eyebrow">Voice Actor · Director · Creator</div>
+      <h1>Beckham<br/><span>Chadwick</span></h1>
+      <p class="hero-subtitle">
+        Animation, stop-motion &amp; video game VA specializing in
+        <strong>expressive, character-driven performances.</strong>
+      </p>
+      <p class="hero-desc">
+        Heroes, villains, eccentrics, and emotionally grounded roles.
+        10+ accents. Professional home studio. Fast turnaround. No ego about direction.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://youtu.be/Z8-3LoOST5s?si=8BETSHz4-ydQV1RZ" target="_blank" class="btn-primary">▶ &nbsp;Listen to Demo</a>
+        <a href="#credits" class="btn-secondary">View Credits</a>
+        <a href="#contact" class="btn-secondary">Work With Me</a>
       </div>
-      <div class="stat-item">
-        <div class="stat-number">3</div>
-        <div class="stat-label">Published Credits</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Accents &amp; Dialects</div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Booked Roles</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Published Credits</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Accents &amp; Dialects</div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- HEADSHOT -->
-  <div class="hero-headshot" style="flex-shrink:0; width:280px; margin-top:0.5rem;">
-    <img
-      src="headshot.jpg"
-      alt="Beckham Chadwick"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      style="width:100%; border-radius:12px; border:2px solid var(--accent); object-fit:cover; aspect-ratio:3/4; display:block;"
-    />
-    <div style="display:none; width:100%; aspect-ratio:3/4; border-radius:12px; border:2px dashed var(--accent); align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; color:var(--text-muted); font-size:0.85rem; text-align:center; padding:1rem; box-sizing:border-box;">
-      <div style="font-size:2rem; opacity:0.4;">📷</div>
-      <div>Add headshot.jpg<br/>to this folder</div>
+    <div class="hero-headshot" style="flex-shrink:0; width:280px; margin-top:0.5rem;">
+      <img
+        src="headshot.jpg"
+        alt="Beckham Chadwick"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        style="width:100%; border-radius:12px; border:2px solid var(--sage-dark); object-fit:cover; aspect-ratio:3/4; display:block;"
+      />
+      <div style="display:none; width:100%; aspect-ratio:3/4; border-radius:12px; border:2px dashed var(--sage-dark); align-items:center; justify-content:center; flex-direction:column; gap:0.5rem; color:var(--text-muted); font-size:0.85rem; text-align:center; padding:1rem; box-sizing:border-box;">
+        <div style="font-size:2rem; opacity:0.4;">📷</div>
+        <div>Add headshot.jpg<br/>to this folder</div>
+      </div>
     </div>
-  </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="about-text">
     <div class="section-label">About</div>
     <h2>Character-driven.<br/>Built to perform.</h2>
-    <p>
-      I'm Beckham, a 19-year-old voice actor, content creator, and director. I specialize in <strong>animation, stop-motion,
-      and video game</strong> voice work, with a natural midrange voice that goes deep and
-      handles accents with ease.
-    </p>
-    <p>
-      Since early 2026, I've been deep in the work, booked roles across indie animated series,
-      brickfilms, and a Steam game, with more always in the pipeline.
-      I take direction well, deliver fast, and bring no ego to the booth.
-    </p>
-    <p>
-      Beyond voice acting, I'm building my own animated series (<em>Mono No Aware</em>),
-      learning 2D and 3D animation, and working toward the long game: <strong>owning my
-      own studio and creating original shows.</strong>
-    </p>
+    <p>I'm Beckham, a 19-year-old voice actor, content creator, and director. I specialize in <strong>animation, stop-motion, and video game</strong> voice work, with a natural midrange voice that goes deep and handles accents with ease.</p>
+    <p>Since early 2026, I've been deep in the work, booked roles across indie animated series, brickfilms, and a Steam game, with more always in the pipeline. I take direction well, deliver fast, and bring no ego to the booth.</p>
+    <p>Beyond voice acting, I'm building my own animated series (<em>Mono No Aware</em>), learning 2D and 3D animation, and working toward the long game: <strong>owning my own studio and creating original shows.</strong></p>
     <div class="accent-block" style="margin-top:2rem;">
       <p>"Comfortable taking direction and delivering fast turnarounds. Not interested in audiobooks or comic dubbing, animation, games, and stop-motion are the focus."</p>
     </div>
   </div>
-
   <div class="about-sidebar">
     <div class="gear-block">
       <h3>Studio Setup</h3>
-      <div class="gear-item">
-        <span>Microphone</span>
-        <span>Rode NT1 Signature</span>
-      </div>
-      <div class="gear-item">
-        <span>Interface</span>
-        <span>Behringer UMC22</span>
-      </div>
-      <div class="gear-item">
-        <span>Software</span>
-        <span>Audacity</span>
-      </div>
-      <div class="gear-item">
-        <span>Room</span>
-        <span>Acoustically treated</span>
-      </div>
+      <div class="gear-item"><span>Microphone</span><span>Rode NT1 Signature</span></div>
+      <div class="gear-item"><span>Interface</span><span>Behringer UMC22</span></div>
+      <div class="gear-item"><span>Software</span><span>Audacity</span></div>
+      <div class="gear-item"><span>Room</span><span>Acoustically treated</span></div>
     </div>
-
     <div class="gear-block">
       <h3>Accents &amp; Dialects</h3>
       <div class="accents-grid">
@@ -790,10 +396,8 @@
         <span class="accent-tag">Irish</span>
         <span class="accent-tag">Russian</span>
         <span class="accent-tag">Italian</span>
-
       </div>
     </div>
-
     <div class="gear-block">
       <h3>Character Types</h3>
       <div class="accents-grid">
@@ -812,7 +416,6 @@
 
 <div class="section-divider"></div>
 
-<!-- CREDITS -->
 <section id="credits" style="max-width:1200px; margin:0 auto;">
   <div class="credits-header">
     <div>
@@ -833,8 +436,8 @@
       <div class="credit-desc">Voiced the majority of characters in this wild comedic short.</div>
       <div class="credit-studio">By <strong>Yosin Studios</strong></div>
       <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
-        <span class="credit-badge badge-published">✓ Published</span>
-        <a href="https://youtube.com/shorts/f5pT2gEh5jk?si=HpKKXDhBnEmK_r-r" target="_blank" class="credit-watch-btn">▶ Watch</a>
+        <span class="credit-badge badge-published">&#10003; Published</span>
+        <a href="https://youtube.com/shorts/f5pT2gEh5jk?si=HpKKXDhBnEmK_r-r" target="_blank" class="credit-watch-btn">&#9654; Watch</a>
       </div>
     </div>
     <div class="credit-card">
@@ -844,8 +447,8 @@
       <div class="credit-desc">A hardened war veteran turned mobster. 1980s New York crime drama.</div>
       <div class="credit-studio">By <strong>JG Bricks</strong></div>
       <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
-        <span class="credit-badge badge-published">✓ Published</span>
-        <a href="https://www.youtube.com/watch?v=fsQvY0BvsJY" target="_blank" class="credit-watch-btn">▶ Watch</a>
+        <span class="credit-badge badge-published">&#10003; Published</span>
+        <a href="https://www.youtube.com/watch?v=fsQvY0BvsJY" target="_blank" class="credit-watch-btn">&#9654; Watch</a>
       </div>
     </div>
     <div class="credit-card">
@@ -855,19 +458,26 @@
       <div class="credit-desc">Debut published credit as a bounty hunter in this action stop-motion film.</div>
       <div class="credit-studio">By <strong>BrickMaestro</strong></div>
       <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap; margin-top:0.75rem;">
-        <span class="credit-badge badge-published">✓ Published</span>
-        <a href="https://www.youtube.com/watch?v=jYAtuDGgATA" target="_blank" class="credit-watch-btn">▶ Watch</a>
+        <span class="credit-badge badge-published">&#10003; Published</span>
+        <a href="https://www.youtube.com/watch?v=jYAtuDGgATA" target="_blank" class="credit-watch-btn">&#9654; Watch</a>
       </div>
     </div>
   </div>
 
   <div id="tab-production" class="tab-panel">
     <div class="credit-card">
-      <div class="credit-type">Animated Series · Action</div>
-      <div class="credit-title">Superboy: New World Order</div>
-      <div class="credit-role">Superboy / Conner Kent</div>
-      <div class="credit-desc">Lead role. Superboy as a fugitive across Europe. Action-driven animated series.</div>
-      <span class="credit-badge badge-main">Main Role</span>
+      <div class="credit-type">Animated Series · Greek Mythology</div>
+      <div class="credit-title">Olive Groves</div>
+      <div class="credit-role">Patroclus</div>
+      <div class="credit-desc">Newly immortal warrior at Troy. Lover of Achilles. Greek mythology animated series.</div>
+      <span class="credit-badge badge-supporting">Supporting</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Video Game · Adventure Shooter</div>
+      <div class="credit-title">Killjoy Services</div>
+      <div class="credit-role">George (NPC)</div>
+      <div class="credit-desc">An adventure shooter packed with love letters to other games. Playing George, a recurring NPC character.</div>
+      <span class="credit-badge badge-recurring">Recurring NPC</span>
     </div>
     <div class="credit-card">
       <div class="credit-type">Brickfilm · Superhero</div>
@@ -894,8 +504,15 @@
       <div class="credit-type">Animated Series · Apocalyptic</div>
       <div class="credit-title">Dawn of Death</div>
       <div class="credit-role">Ki-Karsha / Errand Boy</div>
-      <div class="credit-desc">Long-term series. Leader of a humanoid tarantula species + additional supporting role.</div>
+      <div class="credit-desc">Long-term series. Leader of a humanoid tarantula species plus an additional supporting role.</div>
       <span class="credit-badge badge-supporting">Supporting (x2)</span>
+    </div>
+    <div class="credit-card">
+      <div class="credit-type">Animated Series · Comedy</div>
+      <div class="credit-title">Raging Toons</div>
+      <div class="credit-role">Zieth Cunnely</div>
+      <div class="credit-desc">A 13-year-old Jackal Gang member with a deeply pessimistic "tired of this crap" energy, caught in the middle of an ongoing rivalry with the all-female Fox Squad.</div>
+      <span class="credit-badge badge-supporting">Supporting</span>
     </div>
     <div class="credit-card">
       <div class="credit-type">Animated Series · Crime Drama</div>
@@ -904,71 +521,157 @@
       <div class="credit-desc">Southern-accented supporting role in a fictional true-crime-style animated series.</div>
       <span class="credit-badge badge-supporting">Supporting</span>
     </div>
-    <div class="credit-card">
-      <div class="credit-type">Animated Series</div>
-      <div class="credit-title">A New Life</div>
-      <div class="credit-role">Flash Marty</div>
-      <div class="credit-desc">Pam's protective older brother. Teases her nonstop but has her back completely.</div>
-      <span class="credit-badge badge-recurring">Major Recurring</span>
-    </div>
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- MONO NO AWARE -->
+<!-- MONO NO AWARE - FULL SECTION -->
 <div id="mna">
-  <div style="margin-bottom:2rem;">
+
+  <div style="margin-bottom:2.5rem;">
     <div class="section-label">Original Work</div>
     <h2>Creator &amp; Director</h2>
   </div>
+
+  <!-- BANNER -->
   <div class="mna-wrapper">
     <div class="mna-visual">
       <div class="mna-tag">Original Animated Series · 2026</div>
       <div class="mna-title"><em>Mono<br/>No Aware</em></div>
-      <p class="mna-logline">"Two alien best friends in lawn chairs, passing a joint, talking about nothing."</p>
+      <p class="mna-logline">"Two aliens in lawn chairs in a backyard at night. Passing a joint. Talking about nothing. The show knows something they don't."</p>
     </div>
     <div class="mna-info">
       <h3>Creator · Director · Voice of Bro</h3>
-      <p>
-        Bro and Dude are two grey aliens who sit in lawn chairs outside every night,
-        passing a joint and talking about whatever's on their minds, dabbing, bad beer choices,
-        broken speakers, the last roach. No plot. No stakes. Just two guys existing in the same
-        space, and somehow it's always funny.
-      </p>
+      <p>Conceived, written, directed, and produced by Beckham Chadwick. Everything from the scripts to the sound direction to the team came from one vision built from the ground up.</p>
       <div class="mna-details">
-        <div class="mna-detail">
-          <div class="mna-detail-label">Format</div>
-          <div class="mna-detail-value">60–90 sec / episode</div>
+        <div class="mna-detail"><div class="mna-detail-label">Format</div><div class="mna-detail-value">1-2 min / episode</div></div>
+<div class="mna-detail"><div class="mna-detail-label">Platform</div><div class="mna-detail-value">YouTube / TikTok</div></div>
+        <div class="mna-detail"><div class="mna-detail-label">Status</div><div class="mna-detail-value">Production</div></div>
+        <div class="mna-detail"><div class="mna-detail-label">Aesthetic</div><div class="mna-detail-value">Adult Swim Bump</div></div>
+        <div class="mna-detail"><div class="mna-detail-label">Goal</div><div class="mna-detail-value">Build an audience</div></div>
+      </div>
+      <div class="mna-status-badge">Team assembled. Pre-production underway.</div>
+    </div>
+  </div>
+
+  <!-- THE CONCEPT -->
+  <div class="mna-block">
+    <h3>The Concept</h3>
+    <p>Bro and Dude are two aliens. They sit in lawn chairs in a Midwest backyard every night. They pass a joint. They talk about whatever is on their minds. There is no plot. There are no stakes. The location never changes. The format never changes.</p>
+    <p>What changes is what they talk about. Early episodes are low, casual, observational. From Episode 03 onward, the conversations start carrying real weight. Bro starts voicing opinions on things that matter. Dude pushes back. The comedy is always driving. What it's actually saying underneath is the show's business.</p>
+  </div>
+
+  <!-- CHARACTERS -->
+  <div class="mna-block">
+    <h3>The Characters</h3>
+    <div class="mna-char-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="mna-char-card">
+        <div class="mna-char-header" style="background:#5C1A1A;">
+          <div class="char-name">BRO</div>
+          <div class="char-tag">The one with opinions</div>
         </div>
-        <div class="mna-detail">
-          <div class="mna-detail-label">Platform</div>
-          <div class="mna-detail-value">YouTube Shorts / Reels</div>
-        </div>
-        <div class="mna-detail">
-          <div class="mna-detail-label">Aesthetic</div>
-          <div class="mna-detail-value">Y2K / Early-2000s</div>
-        </div>
-        <div class="mna-detail">
-          <div class="mna-detail-label">Status</div>
-          <div class="mna-detail-value">Pre-production</div>
+        <div class="mna-char-body">
+          <div class="mna-char-trait"><strong>Look:</strong> Red beanie, red sweatshirt, jeans. Sitting forward, elbows on knees.</div>
+          <div class="mna-char-trait"><strong>Energy:</strong> Grounded, assertive, quick to get heated. Always takes the first hit.</div>
+          <div class="mna-char-trait"><strong>Role:</strong> The show's perspective. From Ep 03+, starts voicing real opinions. Needs to be checked.</div>
+          <div class="mna-char-trait"><strong>Voice:</strong> Beckham Chadwick</div>
         </div>
       </div>
-      <div class="casting-alert">
-        Actively casting, VA, animator &amp; editor needed. No pay / portfolio project.
+      <div class="mna-char-card">
+        <div class="mna-char-header" style="background:#1A2E5C;">
+          <div class="char-name">DUDE</div>
+          <div class="char-tag">The one who keeps it together</div>
+        </div>
+        <div class="mna-char-body">
+          <div class="mna-char-trait"><strong>Look:</strong> Blue beanie, blue sweatshirt, jeans. Slouched back in the chair.</div>
+          <div class="mna-char-trait"><strong>Energy:</strong> Chill, loose, comfortable in silence. Slightly spaced out.</div>
+          <div class="mna-char-trait"><strong>Role:</strong> The mediator. Keeps the conversation from becoming a monologue. The audience's entry point.</div>
+          <div class="mna-char-trait"><strong>Voice:</strong> UnusedUmbrella</div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- THE TEAM -->
+  <div class="mna-block">
+    <h3>The Team</h3>
+    <p style="color:var(--text-muted); font-size:0.85rem;">A fully assembled independent crew built specifically for this project.</p>
+    <div class="mna-team-grid">
+      <div class="mna-team-card">
+        <div class="mna-team-name">Beckham Chadwick</div>
+        <div class="mna-team-role">Creator / Director / Writer / Producer / Editor / Voice of Bro</div>
+      </div>
+      <div class="mna-team-card">
+        <div class="mna-team-name">PoPo Draws</div>
+        <div class="mna-team-role">Animator</div>
+      </div>
+      <div class="mna-team-card">
+        <div class="mna-team-name">UnusedUmbrella</div>
+        <div class="mna-team-role">Voice of Dude</div>
+      </div>
+      <div class="mna-team-card">
+        <div class="mna-team-name">CaryssaSounds</div>
+        <div class="mna-team-role">Audio Engineer / Sound Designer</div>
+      </div>
+      <div class="mna-team-card">
+        <div class="mna-team-name">Harrison Gallagher</div>
+        <div class="mna-team-role">Composer / Original Score</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE LONG GAME -->
+  <div class="mna-block">
+    <h3>The Long Game</h3>
+    <p>Twenty episodes of a producible, dialogue-driven short-form series builds three things simultaneously: an audience, a body of work, and a proof of concept. This is not the final destination. It is how you earn the right to make the bigger show.</p>
+    <p>The format is tight by design. If the show finds traction, the Adult Swim conversation becomes real. If it builds a following large enough, the next project has an audience already waiting before it releases.</p>
+    <div class="mna-longame-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="mna-longame-item">
+        <div class="mna-longame-num">1-2</div>
+        <div class="mna-longame-label">Minutes Per Episode</div>
+      </div>
+      <div class="mna-longame-item">
+        <div class="mna-longame-num">YT</div>
+        <div class="mna-longame-label">Primary Platform</div>
+      </div>
+    </div>
+    <div class="mna-callout" style="margin-top:1.5rem;">
+      <p>Producible is the strategy. One location. Two characters. No plot. That is not a limitation. That is what makes it possible.</p>
+    </div>
+  </div>
+
+  <!-- SHOW SOCIALS -->
+  <div class="mna-block" style="margin-top:1.5rem;">
+    <h3>Find the Show</h3>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap:1rem; margin-top:1.25rem;">
+      <a href="https://www.youtube.com/@MonoNoAwareShow" target="_blank" class="contact-card" style="text-align:left;">
+        <div class="contact-card-label">YouTube</div>
+        <div class="contact-card-value">@MonoNoAwareShow</div>
+      </a>
+      <a href="https://www.tiktok.com/@mononoawareshow" target="_blank" class="contact-card" style="text-align:left;">
+        <div class="contact-card-label">TikTok</div>
+        <div class="contact-card-value">@mononoawareshow</div>
+      </a>
+      <a href="https://www.instagram.com/mononoawareshow/" target="_blank" class="contact-card" style="text-align:left;">
+        <div class="contact-card-label">Instagram</div>
+        <div class="contact-card-value">@mononoawareshow</div>
+      </a>
+      <a href="https://x.com/MonoNoAwareShow" target="_blank" class="contact-card" style="text-align:left;">
+        <div class="contact-card-label">X / Twitter</div>
+        <div class="contact-card-value">@MonoNoAwareShow</div>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <div class="section-divider"></div>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-label" style="justify-content:center;">Contact</div>
   <h2>Let's Work Together</h2>
   <p>Animation, stop-motion, video games. Fast turnaround. No ego.</p>
-
   <div class="contact-grid">
     <a href="mailto:beckhamchadwickwork@gmail.com" class="contact-card">
       <div class="contact-card-label">Email</div>
@@ -994,19 +697,16 @@
       <div class="contact-card-label">TikTok</div>
       <div class="contact-card-value">@beckhamdoesntstoptalking</div>
     </a>
-    <a href="https://www.castingcall.club/beckhamchad-" target="_blank" class="contact-card">
-      <div class="contact-card-label">Mono No Aware Casting</div>
-      <div class="contact-card-value">Join the crew →</div>
+    <a href="https://x.com/MonoNoAwareShow" target="_blank" class="contact-card">
+      <div class="contact-card-label">Mono No Aware</div>
+      <div class="contact-card-value">@MonoNoAwareShow</div>
     </a>
     <a href="https://discord.gg/DcmPPdFs" target="_blank" class="contact-card">
       <div class="contact-card-label">Discord</div>
       <div class="contact-card-value">Mono No Aware Server</div>
     </a>
   </div>
-
-  <div class="footer-line">
-    © 2026 Beckham Chadwick
-  </div>
+  <div class="footer-line">&#169; 2026 Beckham Chadwick</div>
 </section>
 
 <script>
